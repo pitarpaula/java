@@ -99,24 +99,23 @@ Implemented at service level:
 
 ## 💾 Persistence Options
 
-The application supports multiple repository implementations, selectable through `settings.properties`:
+The application behavior is fully configurable using a `settings.properties` file:
 
 ```properties
-repository.type=binary
-cakes.file=cakes.bin
-orders.file=orders.bin
-ui=cli
+repo_type=database
+Ingredient=ingredients.bin
+Reteta=retete.bin
 ```
 
 ### Supported Repositories
 
 ```text
-| Type       | Description                |
-| ---------- | -------------------------- |
-| InMemory   | Data stored in RAM         |
-| TextFile   | Plain text file storage    |
-| BinaryFile | Java object serialization  |
-| SQL        | Relational database (JDBC) |
+| Type       | Description                 |
+| ---------- | --------------------------- |
+| memory     | in-memory storage           |
+| text       | text file storage           |
+| binary     | binary file (serialization) |
+| database   | SQL database (JDBC)         |
 ```
 
 ---
